@@ -2,7 +2,7 @@
 Note for leetcode 
 
 
-!. Clarification
+1. Clarification
 2. Possible solution
   - compare time & space complexity
   - optimal solution
