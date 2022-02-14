@@ -1,5 +1,6 @@
 # LeetCode-note
-Note for leetcode 
+Note for leetcode.
+
 Coding in Python
 
 
