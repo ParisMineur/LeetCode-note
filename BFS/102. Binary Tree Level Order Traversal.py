@@ -6,7 +6,7 @@ class Solution:
         
         res = []
         
-        d = collections.deque()
+        d = collections.deque()  ## Doubly Ended Queue
         d.append(root)
         
         while d:
