@@ -13,3 +13,14 @@ class Solution:
                 right = mid
             else:
                 left = mid
+
+                
+## second solution: Newton method
+'''                
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        r = x
+        while r*r > x+0.99:
+            r = (r + x/r)/2
+        return int(r)
+'''
