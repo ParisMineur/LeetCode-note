@@ -5,11 +5,11 @@ def BFS(graph, start, end):
     queue.append(start)
     
     visited = set()  ## use set to store visited points
-    visited.append(start)
+    visited.add(start)
     
     while queue:
         node = queue.pop()
-        visited.append(node)
+        visited.add(node)
         
         process(node)  ## do something
         
