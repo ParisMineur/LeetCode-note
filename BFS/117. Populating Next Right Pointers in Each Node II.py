@@ -8,23 +8,19 @@ class Solution:
         res = []
         
         while d:
-            l = len(d)
             temp = []
             
-            for _ in range(l):
+            for _ in range(len(d)):
                 node = d.popleft()
                 temp.append(node)
                 
-                if node.left:
-                    d.append(node.left)
-                if node.right:
-                    d.append(node.right)
+                d.append(node.left) if node.left else 0
+                d.append(node.right) if node.right else 0
                     
             res.append(temp)
             
         for a in res:
-            l2 = len(a)
-            for i in range(l2-1):
+            for i in range(len(a)-1):
                 a[i].next = a[i+1]
                 
         return root
