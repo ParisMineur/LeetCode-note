@@ -9,19 +9,9 @@ class Solution:
         new_sum = num + node.val
         
         if not node.left and not node.right:
-            if new_sum == target:
-                return True
-            else:
-                return False
+            return True if new_sum == target else False
         
-        if node.left:
-            l = self.dfs(node.left, new_sum, target)
-        else:
-            l = False
-            
-        if node.right:
-            r = self.dfs(node.right, new_sum, target)
-        else:
-            r = False
+        l = self.dfs(node.left, new_sum, target) if node.left else False
+        r = self.dfs(node.right, new_sum, target) if node.right else False
         
         return l or r
