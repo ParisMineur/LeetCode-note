@@ -6,6 +6,14 @@ class Solution:
         
     def dfs(self, node):
         if not node:
+            return []
+        return self.dfs(node.left) + [node.val] + self.dfs(node.right)
+        
+        
+    ## second dfs() 
+    '''
+    def dfs(self, node):
+        if not node:
             return     
         res = [node.val]
         
@@ -13,3 +21,4 @@ class Solution:
         right = self.dfs(node.right) if node.right else []
         
         return left + res + right
+    '''
